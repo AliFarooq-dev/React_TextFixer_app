@@ -26,11 +26,7 @@ export default function TextArea(props) {
         let newText = text.split(/[ ]+/);
         setText(newText.join(' '));
     }
-    // const firstUpperCase = () => {
 
-    //     let Text = text.split(' ').filter((element) =>{return element.charAt(0).toUpperCase + element.slice(1).toLowerCase  });
-    //     setText(Text);
-    // }
     return (
         <>
             <div>
@@ -43,9 +39,6 @@ export default function TextArea(props) {
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-2" onClick={clearText}>Clear txt</button>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-2" onClick={copyText}>Copy txt</button>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-2" onClick={clearSpace}>Clear Extra Spaces</button>
-                {/* <button disabled = {text.length===0} className="btn btn-primary mx-1" onClick={firstUpperCase}>first UpperCase</button> */}
-
-
             </div>
             <h2 className='my-2'>Summary of Text</h2>
             <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} Words, {text.length} Characters</p>
